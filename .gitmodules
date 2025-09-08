@@ -1,0 +1,6 @@
+[submodule "cogs/judges-mention-cog"]
+	path = cogs/judges-mention-cog
+	url = https://github.com/botcott/judges-mention-cog
+[submodule "cogs/judges-appeals-cog"]
+	path = cogs/judges-appeals-cog
+	url = https://github.com/botcott/judges-appeals-cog
