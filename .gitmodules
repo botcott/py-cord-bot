@@ -4,3 +4,6 @@
 [submodule "cogs/judges-appeals-cog"]
 	path = cogs/judges-appeals-cog
 	url = https://github.com/botcott/judges-appeals-cog
+[submodule "cogs/admin-stats-cog"]
+	path = cogs/admin-stats-cog
+	url = https://github.com/botcott/admin-stats-cog
