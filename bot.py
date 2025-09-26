@@ -20,8 +20,14 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 @bot.event
 async def on_ready():
     logging.info(f"logged in as {bot.user}")
-    
-bot.load_extension("cogs.judges-mention-cog.__init__")
-bot.load_extension("cogs.judges-appeals-cog.__init__")
-# to load cog use this for example: bot.load_extension("cogs.judges-mention-cog.__init__")
+    await bot.change_presence(activity=discord.Game(name="Template!"))
+
+for folder in os.listdir("./cogs"):
+    try:
+        bot.load_extension(f"cogs.{folder}.__init__")
+        logging.info(f"Cog {folder} loaded!")
+    except Exception as e:
+        logging.error(f"Cog {folder} not loaded, error: {e}")
+
+
 bot.run(os.getenv("token"))
